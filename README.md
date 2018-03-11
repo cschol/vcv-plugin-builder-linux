@@ -5,10 +5,17 @@ This repository contains a simple build environment for [VCV Rack](https://githu
 The environment is based on a [Docker](https://www.docker.com/) image of **Ubuntu 16.04 LTS** and provides
 a compiler and libraries that adhere to the minimum version requirements for Rack plugins.
 
-Minimum requirements for plugins:
+*Minimum requirements* for plugins:
 
 - libc v2.23
 - libstdc++ v5.4.0
+
+**IMPORTANT - Why is this required?**
+*Minimum version requirements* refer the library versions that Rack needs at minimum to run.
+Both, `libc` and `libstdc++` are *forward-compatible*. This means, Rack and its plugins need to be
+**compiled** with the minimum version of `libc` and `libstdc++`, but can **run** on any newer version of
+both of the libraries. Compiling plugins with a newer version of the libraries and running them on
+an older version will **not** work.
 
 # Prerequisites
 
