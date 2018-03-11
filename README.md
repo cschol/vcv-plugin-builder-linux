@@ -11,6 +11,7 @@ a compiler and libraries that adhere to the minimum version requirements for Rac
 - libstdc++ v5.4.0
 
 **IMPORTANT - Why is this required?**
+
 *Minimum version requirements* refer the library versions that Rack needs at minimum to run.
 Both, `libc` and `libstdc++` are *forward-compatible*. This means, Rack and its plugins need to be
 **compiled** with the minimum version of `libc` and `libstdc++`, but can **run** on any newer version of
@@ -19,7 +20,8 @@ an older version will **not** work.
 
 # Prerequisites
 
-`Docker` is required. Install instructions for your platform can be found on the [Docker website](https://docs.docker.com/install/).
+`Docker` is required. Install instructions for all supported platforms can be found on the
+[Docker website](https://docs.docker.com/install/).
 
 # Usage
 
