@@ -37,6 +37,7 @@ docker run \
     -v ${RACK_DIR}:/opt/Rack:ro \
     -v ${WORKING_DIR}:/opt/workspace \
     -w /opt/workspace \
+    --user $(id -u):$(id -g) \
     --entrypoint "make" \
     --entrypoint "/bin/bash" \
 	${DOCKER_IMAGE_NAME} \
